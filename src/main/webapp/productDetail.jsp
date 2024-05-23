@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="model.ProductBean, java.text.DecimalFormat"%>
+    pageEncoding="ISO-8859-1" import="model.ProductBean, java.text.DecimalFormat" errorPage= "Error.jsp"%>
 <% 
 	ProductBean prodotto = null;
 	if (request.getAttribute("prodottoDettaglio") == null) {

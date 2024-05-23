@@ -39,6 +39,7 @@ public class ProductControl extends HttpServlet {
 
 		if (request.getParameter("action") != null && request.getParameter("action").compareTo("dettaglio") == 0) {
 			String codiceStr = request.getParameter("codice");
+
 			int codice = Integer.parseInt(codiceStr);
 			
 			ProductModel model = new ProductModel();

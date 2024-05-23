@@ -120,7 +120,9 @@ public class ProductModel {
 		PreparedStatement preparedStatement2 = null;
 
 		Collection<ProductBean> products = new LinkedList<ProductBean>();
-
+		
+		if(where.equals("Arredamento Casa") || where.equals("Action Figuers") || where.equals("Gadget")) {
+			
 		String selectSQL = "SELECT * FROM " + ProductModel.TABLE_NAME + " WHERE deleted = 'false' AND nomeTipologia = '" + where + "'";
 		String sql2 = "SELECT AVG(votazione) FROM Recensione WHERE codiceProdotto = ?";
 		
@@ -169,6 +171,7 @@ public class ProductModel {
 				}
 			}
 		}
+	}
 		return products;
 	}
 	

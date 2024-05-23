@@ -60,21 +60,26 @@ public class Vendita extends HttpServlet {
 		                }
 		                else {
 		                	if (item.getFieldName().compareTo("nome") == 0) {
+		                		if(!item.getFieldName().startsWith("<"))
 		                		product.setNome(item.getString());
 		                	}
 		                	else if (item.getFieldName().compareTo("prezzo") == 0) {
 		                		product.setPrezzo(Double.parseDouble(item.getString()));
 		                	}
 		                	else if (item.getFieldName().compareTo("spedizione") == 0) {
+		                		if(!item.getFieldName().startsWith("<"))
 		                		product.setSpedizione(Double.parseDouble(item.getString()));
 		                	}
 		                	else if (item.getFieldName().compareTo("tipologia") == 0) {
+		                		if(!item.getFieldName().startsWith("<"))
 		                		product.setTipologia(item.getString());
 		                	}
 							else if (item.getFieldName().compareTo("tag") == 0) {
+								if(!item.getFieldName().startsWith("<"))
 								product.setTag(item.getString());
 							}
 							else if (item.getFieldName().compareTo("descrizione") == 0) {
+								if(!item.getFieldName().startsWith("<"))
 		                		product.setDescrizione(item.getString());
 		                	}
 		                }
